@@ -10,9 +10,7 @@ export class ImgBrokenDirective {
     const elementNativo = this.elHost.nativeElement;
     const imgPlaceHolder = 'https://via.placeholder.com/150';
 
-    elementNativo.src = this.customImg
-      ? (elementNativo.src = this.customImg)
-      : imgPlaceHolder;
+    elementNativo.src = this.customImg ? this.customImg : imgPlaceHolder;
   }
 
   constructor(private elHost: ElementRef) {}
